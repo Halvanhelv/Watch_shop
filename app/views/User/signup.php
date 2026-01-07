@@ -3,8 +3,8 @@
     <div class="container">
         <div class="breadcrumbs-main">
             <ol class="breadcrumb">
-                <li><a href="<?= PATH ?>">Главная</a></li>
-                <li>Регистрация</li>
+                <li><a href="<?= PATH ?>">Home</a></li>
+                <li>Registration</li>
             </ol>
         </div>
     </div>
@@ -30,13 +30,13 @@
                                 </div>
                                 <div class="form-group has-feedback">
                                     <label for="pasword">Password</label>
-                                    <input type="password" name="password" class="form-control" id="pasword" placeholder="Password" data-error="Пароль должен включать не менее 6 символов" data-minlength="6" value="<?=isset($_SESSION['form_data']['password']) ? h($_SESSION['form_data']['password']) : '';?>" required>
+                                    <input type="password" name="password" class="form-control" id="pasword" placeholder="Password" data-error="Password must be at least 6 characters" data-minlength="6" value="<?=isset($_SESSION['form_data']['password']) ? h($_SESSION['form_data']['password']) : '';?>" required>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group has-feedback">
-                                    <label for="name">Имя</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Имя" value="<?=isset($_SESSION['form_data']['name']) ? h($_SESSION['form_data']['name']) : '';?>" required>
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" value="<?=isset($_SESSION['form_data']['name']) ? h($_SESSION['form_data']['name']) : '';?>" required>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
                                 <div class="form-group has-feedback">
@@ -49,7 +49,7 @@
                                     <input type="text" name="address" class="form-control" id="address" placeholder="Address" value="<?=isset($_SESSION['form_data']['address']) ? h($_SESSION['form_data']['address']) : '';?>" required>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
-                                <button type="submit" class="btn btn-default">Зарегистрировать</button>
+                                <button type="submit" class="btn btn-default">Register</button>
                             </form>
                             <?php if(isset($_SESSION['form_data'])) unset($_SESSION['form_data']); ?>
                         </div>

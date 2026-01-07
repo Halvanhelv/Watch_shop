@@ -36,11 +36,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <a class="dropdown-toggle" data-toggle="dropdown">Account <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <?php if(!empty($_SESSION['user'])): ?>
-                                <li><a href="#">Добро пожаловать, <?=h($_SESSION['user']['name']);?></a></li>
-                                <li><a href="user/logout">Выход</a></li>
+                                <li><a href="#">Welcome, <?=h($_SESSION['user']['name']);?></a></li>
+                                <li><a href="user/logout">Logout</a></li>
                             <?php else: ?>
-                                <li><a href="user/login">Вход</a></li>
-                                <li><a href="user/signup">Регистрация</a></li>
+                                <li><a href="user/login">Login</a></li>
+                                <li><a href="user/signup">Registration</a></li>
                             <?php endif; ?>
                         </ul>
                     </div>
@@ -192,15 +192,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Корзина</h4>
+                <h4 class="modal-title" id="myModalLabel">Cart</h4>
             </div>
             <div class="modal-body">
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
-                <a href="cart/view" type="button" class="btn btn-primary">Оформить заказ</a>
-                <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Continue shopping</button>
+                <a href="cart/view" type="button" class="btn btn-primary">Checkout</a>
+                <button type="button" class="btn btn-danger" onclick="clearCart()">Clear cart</button>
             </div>
         </div>
     </div>

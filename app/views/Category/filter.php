@@ -22,11 +22,11 @@
     <?php endforeach; ?>
     <div class="clearfix"></div>
     <div class="text-center">
-        <p>(<?=count($products)?> товара(ов) из <?=$total;?>)</p>
+        <p>(<?=count($products)?> product(s) of <?=$total;?>)</p>
         <?php if($pagination->countPages > 1): ?>
             <?=$pagination;?>
         <?php endif; ?>
     </div>
 <?php else: ?>
-    <h3>Товаров не найдено...</h3>
+    <h3>Products not found...</h3>
 <?php endif; ?>

@@ -30,13 +30,13 @@ class Router{
                     $controllerObject->$action();
                     $controllerObject->getView();
                 }else{
-                    throw new \Exception("Метод $controller::$action не найден", 404);
+                    throw new \Exception("Method $controller::$action not found", 404);
                 }
             }else{
-                throw new \Exception("Контроллер $controller не найден", 404);
+                throw new \Exception("Controller $controller not found", 404);
             }
         }else{
-            throw new \Exception("Страница не найдена", 404);
+            throw new \Exception("Page not found", 404);
         }
     }
 

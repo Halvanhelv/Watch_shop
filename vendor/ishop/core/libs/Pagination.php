@@ -19,14 +19,14 @@ class Pagination{
     }
 
     public function getHtml(){
-        $back = null; // ссылка НАЗАД
-        $forward = null; // ссылка ВПЕРЕД
-        $startpage = null; // ссылка В НАЧАЛО
-        $endpage = null; // ссылка В КОНЕЦ
-        $page2left = null; // вторая страница слева
-        $page1left = null; // первая страница слева
-        $page2right = null; // вторая страница справа
-        $page1right = null; // первая страница справа
+        $back = null; // BACK link
+        $forward = null; // FORWARD link
+        $startpage = null; // TO START link
+        $endpage = null; // TO END link
+        $page2left = null; // second page on the left
+        $page1left = null; // first page on the left
+        $page2right = null; // second page on the right
+        $page1right = null; // first page on the right
 
         if( $this->currentPage > 1 ){
             $back = "<li><a class='nav-link' href='{$this->uri}page=" .($this->currentPage - 1). "'>&lt;</a></li>";

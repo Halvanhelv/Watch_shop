@@ -43,13 +43,13 @@ class Order extends AppModel {
         require APP . '/views/mail/mail_order.php';
         $body = ob_get_clean();
 
-        $message_client = (new Swift_Message("Вы совершили заказ №{$order_id} на сайте " . App::$app->getProperty('shop_name')))
+        $message_client = (new Swift_Message("You have placed order #{$order_id} on " . App::$app->getProperty('shop_name')))
             ->setFrom([App::$app->getProperty('smtp_login') => App::$app->getProperty('shop_name')])
             ->setTo($user_email)
             ->setBody($body, 'text/html')
         ;
 
-        $message_admin = (new Swift_Message("Сделан заказ №{$order_id}"))
+        $message_admin = (new Swift_Message("Order #{$order_id} has been placed"))
             ->setFrom([App::$app->getProperty('smtp_login') => App::$app->getProperty('shop_name')])
             ->setTo(App::$app->getProperty('admin_email'))
             ->setBody($body, 'text/html')
@@ -62,7 +62,7 @@ class Order extends AppModel {
         unset($_SESSION['cart.qty']);
         unset($_SESSION['cart.sum']);
         unset($_SESSION['cart.currency']);
-        $_SESSION['success'] = 'Спасибо за Ваш заказ. В ближайшее время с Вами свяжется менеджер для согласования заказа';
+        $_SESSION['success'] = 'Thank you for your order. A manager will contact you shortly to confirm the order';
     }
 
 }

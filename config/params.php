@@ -2,7 +2,7 @@
 
 return [
     'admin_email' => 'matroskin978@gmail.com',
-    'shop_name' => 'Магазин ishop2.loc',
+    'shop_name' => 'Shop ishop2.loc',
     'pagination' => 3,
     'smtp_host' => 'smtp.ukr.net',
     'smtp_port' => '2525',

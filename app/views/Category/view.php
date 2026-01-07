@@ -39,14 +39,14 @@
                         <?php endforeach; ?>
                         <div class="clearfix"></div>
                         <div class="text-center">
-                            <p>(<?=count($products)?> товара(ов) из <?=$total;?>)</p>
+                            <p>(<?=count($products)?> product(s) of <?=$total;?>)</p>
                             <?php if($pagination->countPages > 1): ?>
                                 <?=$pagination;?>
                             <?php endif; ?>
                         </div>
                     </div>
                 <?php else: ?>
-                    <h3>В этой категории товаров пока нет...</h3>
+                    <h3>No products in this category yet...</h3>
                 <?php endif; ?>
             </div>
             <div class="col-md-3 prdt-right">

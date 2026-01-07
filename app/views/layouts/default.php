@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>Шаблон DEFAULT</h1>
+<h1>DEFAULT Template</h1>
 
 <?=$content;?>
 

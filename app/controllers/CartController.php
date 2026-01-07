@@ -55,12 +55,12 @@ class CartController extends AppController {
     }
 
     public function viewAction(){
-        $this->setMeta('Корзина');
+        $this->setMeta('Cart');
     }
 
     public function checkoutAction(){
         if(!empty($_POST)){
-            // регистрация пользователя
+            // user registration
             if(!User::checkAuth()){
                 $user = new User();
                 $data = $_POST;
@@ -72,13 +72,13 @@ class CartController extends AppController {
                 }else{
                     $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
                     if(!$user_id = $user->save('user')){
-                        $_SESSION['error'] = 'Ошибка!';
+                        $_SESSION['error'] = 'Error!';
                         redirect();
                     }
                 }
             }
 
-            // сохранение заказа
+            // save order
             $data['user_id'] = isset($user_id) ? $user_id : $_SESSION['user']['id'];
             $data['note'] = !empty($_POST['note']) ? $_POST['note'] : '';
             $user_email = isset($_SESSION['user']['email']) ? $_SESSION['user']['email'] : $_POST['email'];

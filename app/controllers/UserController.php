@@ -17,27 +17,27 @@ class UserController extends AppController {
             }else{
                 $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
                 if($user->save('user')){
-                    $_SESSION['success'] = 'Пользователь зарегистрирован';
+                    $_SESSION['success'] = 'User registered';
                 }else{
-                    $_SESSION['error'] = 'Ошибка!';
+                    $_SESSION['error'] = 'Error!';
                 }
             }
             redirect();
         }
-        $this->setMeta('Регистрация');
+        $this->setMeta('Registration');
     }
 
     public function loginAction(){
         if(!empty($_POST)){
             $user = new User();
             if($user->login()){
-                $_SESSION['success'] = 'Вы успешно авторизованы';
+                $_SESSION['success'] = 'You have successfully logged in';
             }else{
-                $_SESSION['error'] = 'Логин/пароль введены неверно';
+                $_SESSION['error'] = 'Login/password entered incorrectly';
             }
             redirect();
         }
-        $this->setMeta('Вход');
+        $this->setMeta('Login');
     }
 
     public function logoutAction(){

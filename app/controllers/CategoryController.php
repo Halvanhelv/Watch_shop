@@ -14,7 +14,7 @@ class CategoryController extends AppController {
         $alias = $this->route['alias'];
         $category = \R::findOne('category', 'alias = ?', [$alias]);
         if(!$category){
-            throw new \Exception('Страница не найдена', 404);
+            throw new \Exception('Page not found', 404);
         }
 
         $breadcrumbs = Breadcrumbs::getBreadcrumbs($category->id);

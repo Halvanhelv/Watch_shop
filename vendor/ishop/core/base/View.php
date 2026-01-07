@@ -35,14 +35,14 @@ class View {
             require_once $viewFile;
             $content = ob_get_clean();
         }else{
-            throw new \Exception("На найден вид {$viewFile}", 500);
+            throw new \Exception("View not found {$viewFile}", 500);
         }
         if(false !== $this->layout){
             $layoutFile = APP . "/views/layouts/{$this->layout}.php";
             if(is_file($layoutFile)){
                 require_once $layoutFile;
             }else{
-                throw new \Exception("На найден шаблон {$this->layout}", 500);
+                throw new \Exception("Template not found {$this->layout}", 500);
             }
         }
     }

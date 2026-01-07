@@ -66,7 +66,7 @@
                                 <ul>
                                     <li>Color
                                         <select>
-                                            <option>Выбрать цвет</option>
+                                            <option>Select color</option>
                                             <?php foreach($mods as $mod): ?>
                                             <option data-title="<?=$mod->title;?>" data-price="<?=$mod->price * $curr['value'];?>" value="<?=$mod->id;?>"><?=$mod->title;?></option>
                                             <?php endforeach; ?>
@@ -129,7 +129,7 @@
                 <?php if($related): ?>
                 <div class="latestproducts">
                     <div class="product-one">
-                        <h3>С этим товаром также покупают:</h3>
+                        <h3>Customers also buy:</h3>
                         <?php foreach($related as $item): ?>
                         <div class="col-md-4 product-left p-left">
                             <div class="product-main simpleCart_shelfItem">
@@ -159,7 +159,7 @@
                 <?php if($recentlyViewed): ?>
                     <div class="latestproducts">
                         <div class="product-one">
-                            <h3>Недавно просмотренные:</h3>
+                            <h3>Recently viewed:</h3>
                             <?php foreach($recentlyViewed as $item): ?>
                                 <div class="col-md-4 product-left p-left">
                                     <div class="product-main simpleCart_shelfItem">

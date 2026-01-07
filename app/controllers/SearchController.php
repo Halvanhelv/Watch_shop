@@ -20,7 +20,7 @@ class SearchController extends AppController{
         if($query){
             $products = \R::find('product', "title LIKE ?", ["%{$query}%"]);
         }
-        $this->setMeta('Поиск по: ' . h($query));
+        $this->setMeta('Search for: ' . h($query));
         $this->set(compact('products', 'query'));
     }
 
