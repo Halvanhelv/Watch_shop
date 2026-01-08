@@ -2,7 +2,7 @@ a:2:{s:4:"data";s:1174:"<li>
     <a href="category/men">Men</a>
             <ul>
             <li>
-    <a href="category/elektronnye">Электронные</a>
+    <a href="category/elektronnye">Electronic</a>
             <ul>
             <li>
     <a href="category/casio">Casio</a>
@@ -10,7 +10,7 @@ a:2:{s:4:"data";s:1174:"<li>
     <a href="category/citizen">Citizen</a>
     </li>        </ul>
     </li><li>
-    <a href="category/mehanicheskie">Механические</a>
+    <a href="category/mehanicheskie">Mechanical</a>
             <ul>
             <li>
     <a href="category/royal-london">Royal London</a>
@@ -24,13 +24,13 @@ a:2:{s:4:"data";s:1174:"<li>
     <a href="category/women">Women</a>
             <ul>
             <li>
-    <a href="category/elektronnye-11">Электронные</a>
+    <a href="category/elektronnye-11">Electronic</a>
             <ul>
             <li>
     <a href="category/adriatica">Adriatica</a>
     </li>        </ul>
     </li><li>
-    <a href="category/mehanicheskie-12">Механические</a>
+    <a href="category/mehanicheskie-12">Mechanical</a>
             <ul>
             <li>
     <a href="category/anne-klein">Anne Klein</a>
